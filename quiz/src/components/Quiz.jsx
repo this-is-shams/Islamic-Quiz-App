@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -56,9 +57,7 @@ export default function Quiz(props) {
             </div>
             <div
               onClick={() => selectedOption("B")}
-              className={`border-2 lg:text-lg shadow-md p-4 break-words sm:w-100 ${
-                Option === "B" ? "bg-yellow-200" : ""
-              } ${Correct === "B" ? "bg-green-200" : ""}`}
+              className={`border-2 lg:text-lg shadow-md p-4 break-words sm:w-100  ${Correct === "B" ? "bg-green-200" : ""} ${(Option === "B" && Correct!=Option) ? "bg-yellow-200" : ""}`}
             >
               <p>
                 <span className="font-bold"></span>&nbsp;&nbsp;&nbsp;
@@ -69,9 +68,7 @@ export default function Quiz(props) {
           <div className="space-y-10 lg:w-1/2">
             <div
               onClick={() => selectedOption("C")}
-              className={`border-2 lg:text-lg shadow-md p-4 break-words sm:w-100 ${
-                Option === "C" ? "bg-yellow-200" : ""
-              } ${Correct === "C" ? "bg-green-200" : ""}`}
+              className={`border-2 lg:text-lg shadow-md p-4 break-words sm:w-100  ${Correct === "C" ? "bg-green-200" : ""} ${(Option === "C" && Correct!=Option) ? "bg-yellow-200" : ""}`}
             >
               <p>
                 <span className="font-bold"></span>&nbsp;&nbsp;&nbsp;
@@ -80,9 +77,7 @@ export default function Quiz(props) {
             </div>
             <div
               onClick={() => selectedOption("D")}
-              className={`border-2 lg:text-lg shadow-md p-4 break-words sm:w-100 ${
-                Option === "D" ? "bg-yellow-200" : ""
-              } ${Correct === "D" ? "bg-green-200" : ""}`}
+              className={`border-2 lg:text-lg shadow-md p-4 break-words sm:w-100  ${Correct === "D" ? "bg-green-200" : ""} ${(Option === "D" && Correct!=Option) ? "bg-yellow-200" : ""}`}
             >
               <p>
                 <span className="font-bold"></span>&nbsp;&nbsp;&nbsp;
